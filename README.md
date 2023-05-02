@@ -322,8 +322,8 @@ function play_video(filename, text){
     gesture_only_video.pause();
     gesture_only_video_source.src = filename;
     gesture_only_span_text.innerHTML = text;
-    video.load();
-    video.play();
+    gesture_only_video.load();
+    gesture_only_video.play();
     
 }
 
