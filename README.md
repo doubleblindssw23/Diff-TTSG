@@ -1,2 +1,1 @@
-# Diff-TTSG
-Supplementary webpage for Diff-TTSG
+# Diff-TTSG : Denoising probabilistic integrated speech and gesture synthesis
