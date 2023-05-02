@@ -93,7 +93,31 @@ We present Diff-TTSG, the first diffusion-based probabilistic model that jointly
 audio {
     width: 240px;
 }
+
+/* CSS */
+.button-12 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  border: none;
+
+  background: #6E6D70;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
+  color: #DFDEDF;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-12:focus {
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}
 </style>
+
 
 ## Stimuli from the evaluation test
 
@@ -243,7 +267,7 @@ audio {
     </tr>
   </tbody>
 </table>
-
+<!-- 
 > "I would like replenish stock I would bring up stock for the off-license that sort of stuff So I was doing all the kind of the menial kind of jobs like the kind of boring tedious work that someone had to do."
 <table class="tg">
   <thead>
@@ -278,4 +302,68 @@ audio {
         </td>
     </tr>
   </tbody>
+</table> -->
+
+
+### Gesture only evaluation
+
+
+<script>
+
+function play_video(filename, text){
+    document.getElementById('source_video').src = filename;
+    document.getElementById('playing-gesture-only').innerHTML = text
+}
+
+</script>
+
+<video id="example_video_1" class="video-js" controls width="640" height="360">
+    <source id="source_video" src="./stimuli/gesture-only/TTSG_1_C3_7_eval_0447.mp4" type='video/mp4' />
+</video>
+
+Currently playing: <span id="playing-gesture-only"> Diff-TTSG 1</span>
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky">#</th>
+    <th class="tg-0pky">NAT</th>
+    <th class="tg-0pky">Diff-TTSG</th>
+    <th class="tg-0pky">T2-ISG</th>
+    <th class="tg-0pky">[Grad-TTS]+M</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>1</td>
+    <td><button class="button-12" role="button" onclick="play_video('stimuli/gesture-only/GT_1__C3_7_eval_0447.mp4', NAT 1">NAT 1</button></td>
+    <td><button class="button-12" role="button onclick="stimuli/gesture-only/TTSG_1_C3_7_eval_0447.mp4">Diff-TTSG 1</button></td>
+    <td><button class="button-12" role="button">T2-ISG 1</button></td>
+    <td><button class="button-12" role="button">Grad-TTS + M 1</button></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td><button class="button-12" role="button">NAT 2</button></td>
+    <td><button class="button-12" role="button">Diff-TTSG 2</button></td>
+    <td><button class="button-12" role="button">T2-ISG 2</button></td>
+    <td><button class="button-12" role="button">Grad-TTS + M 2</button></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td><button class="button-12" role="button">NAT 3</button></td>
+    <td><button class="button-12" role="button">Diff-TTSG 3</button></td>
+    <td><button class="button-12" role="button">T2-ISG 3</button></td>
+    <td><button class="button-12" role="button">Grad-TTS + M 3</button></td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td><button class="button-12" role="button">NAT 4</button></td>
+    <td><button class="button-12" role="button">Diff-TTSG 4</button></td>
+    <td><button class="button-12" role="button">T2-ISG 4</button></td>
+    <td><button class="button-12" role="button">Grad-TTS + M 4</button></td>
+  </tr>
+</tbody>
 </table>
+
+
+<!-- HTML !-->
