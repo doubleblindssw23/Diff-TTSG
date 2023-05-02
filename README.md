@@ -310,15 +310,22 @@ audio {
 
 <script>
 
+gesture_only_video = document.getElementById('gesture-only-video')
+gesture_only_video_source = document.getElementById('gesture-only-video-source')
+gesture_only_span_text =  document.getElementById('playing-gesture-only')
 function play_video(filename, text){
-    document.getElementById('source_video').src = filename;
-    document.getElementById('playing-gesture-only').innerHTML = text
+    gesture_only_video.pause();
+    gesture_only_video_source.src = filename;
+    gesture_only_span_text.innerHTML = text;
+    video.load();
+    video.play();
+    
 }
 
 </script>
 
-<video id="example_video_1" class="video-js" controls width="640" height="360">
-    <source id="source_video" src="./stimuli/gesture-only/TTSG_1_C3_7_eval_0447.mp4" type='video/mp4' />
+<video id="gesture-only-video" class="video-js" controls width="640" height="360">
+    <source id="gesture-only-video-source" src="./stimuli/gesture-only/TTSG_1_C3_7_eval_0447.mp4" type='video/mp4' />
 </video>
 
 Currently playing: <span id="playing-gesture-only"> Diff-TTSG 1</span>
@@ -336,8 +343,8 @@ Currently playing: <span id="playing-gesture-only"> Diff-TTSG 1</span>
 <tbody>
   <tr>
     <td>1</td>
-    <td><button class="button-12" role="button" onclick="play_video('stimuli/gesture-only/GT_1__C3_7_eval_0447.mp4', NAT 1">NAT 1</button></td>
-    <td><button class="button-12" role="button onclick="stimuli/gesture-only/TTSG_1_C3_7_eval_0447.mp4">Diff-TTSG 1</button></td>
+    <td><button class="button-12" role="button" onclick="play_video('stimuli/gesture-only/GT_1__C3_7_eval_0447.mp4', 'NAT 1'">NAT 1</button></td>
+    <td><button class="button-12" role="button" onclick="play_video('stimuli/gesture-only/TTSG_1_C3_7_eval_0447.mp4', 'Diff-TTSG 1')">Diff-TTSG 1</button></td>
     <td><button class="button-12" role="button">T2-ISG 1</button></td>
     <td><button class="button-12" role="button">Grad-TTS + M 1</button></td>
   </tr>
