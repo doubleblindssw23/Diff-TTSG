@@ -307,6 +307,11 @@ audio {
 
 ### Gesture only evaluation
 
+<video id="gesture-only-video" class="video-js" controls width="640" height="360">
+    <source id="gesture-only-video-source" src="./stimuli/gesture-only/TTSG_1_C3_7_eval_0447.mp4" type='video/mp4' />
+</video>
+
+Currently playing: <span id="playing-gesture-only"> Diff-TTSG 1</span>
 
 <script>
 
@@ -323,12 +328,6 @@ function play_video(filename, text){
 }
 
 </script>
-
-<video id="gesture-only-video" class="video-js" controls width="640" height="360">
-    <source id="gesture-only-video-source" src="./stimuli/gesture-only/TTSG_1_C3_7_eval_0447.mp4" type='video/mp4' />
-</video>
-
-Currently playing: <span id="playing-gesture-only"> Diff-TTSG 1</span>
 
 <table class="tg">
 <thead>
