@@ -342,7 +342,7 @@ function play_video(filename, text){
 <tbody>
   <tr>
     <td>1</td>
-    <td><button class="button-12" role="button" onclick="play_video('stimuli/gesture-only/GT_1__C3_7_eval_0447.mp4', 'NAT 1'">NAT 1</button></td>
+    <td><button class="button-12" role="button" onclick="play_video('stimuli/gesture-only/GT_1__C3_7_eval_0447.mp4', 'NAT 1')">NAT 1</button></td>
     <td><button class="button-12" role="button" onclick="play_video('stimuli/gesture-only/TTSG_1_C3_7_eval_0447.mp4', 'Diff-TTSG 1')">Diff-TTSG 1</button></td>
     <td><button class="button-12" role="button">T2-ISG 1</button></td>
     <td><button class="button-12" role="button">Grad-TTS + M 1</button></td>
