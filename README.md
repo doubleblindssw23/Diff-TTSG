@@ -90,9 +90,9 @@ We present Diff-TTSG, the first diffusion-based probabilistic model that jointly
   cursor: pointer;
 }
 
-/* audio {
-    width: 110px;
-} */
+audio {
+    width: 120px;
+}
 </style>
 
 ## Stimuli from the evaluation test
