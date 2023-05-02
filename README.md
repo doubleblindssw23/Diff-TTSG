@@ -324,7 +324,6 @@ function play_video(filename, text){
     gesture_only_span_text.innerHTML = text;
     gesture_only_video.load();
     gesture_only_video.play();
-    
 }
 
 </script>
@@ -342,31 +341,31 @@ function play_video(filename, text){
 <tbody>
   <tr>
     <td>1</td>
-    <td><button class="button-12" role="button" onclick="play_video('stimuli/gesture-only/GT_1__C3_7_eval_0447.mp4', 'NAT 1')">NAT 1</button></td>
-    <td><button class="button-12" role="button" onclick="play_video('stimuli/gesture-only/TTSG_1_C3_7_eval_0447.mp4', 'Diff-TTSG 1')">Diff-TTSG 1</button></td>
-    <td><button class="button-12" role="button">T2-ISG 1</button></td>
-    <td><button class="button-12" role="button">Grad-TTS + M 1</button></td>
+    <td><button class="button-12" role="button" onclick="play_video('stimuli/gesture-only/GT_1_C3_7_eval_0447.mp4', 'NAT 1')" >NAT 1</button></td>
+    <td><button class="button-12" role="button" onclick="play_video('stimuli/gesture-only/TTSG_1_C3_7_eval_0447.mp4', 'Diff-TTSG 1')" >Diff-TTSG 1</button></td>
+    <td><button class="button-12" role="button" onclick="play_video('stimuli/gesture-only/ISG_1_C3_7_eval_0447.mp4', 'T2-ISG 1')" >T2-ISG 1</button></td>
+    <td><button class="button-12" role="button" onclick="play_video('stimuli/gesture-only/Grad_1_C3_7_eval_0447.mp4', 'Grad-TTS + M 1')" >Grad-TTS + M 1</button></td>
   </tr>
   <tr>
     <td>2</td>
-    <td><button class="button-12" role="button">NAT 2</button></td>
-    <td><button class="button-12" role="button">Diff-TTSG 2</button></td>
-    <td><button class="button-12" role="button">T2-ISG 2</button></td>
-    <td><button class="button-12" role="button">Grad-TTS + M 2</button></td>
+    <td><button class="button-12" role="button" onclick="play_video('stimuli/gesture-only/GT_2_C3_7_eval_0447.mp4', 'NAT 2')" >NAT 2</button></td>
+    <td><button class="button-12" role="button" onclick="play_video('stimuli/gesture-only/TTSG_2_C3_7_eval_0447.mp4', 'Diff-TTSG 2')" >Diff-TTSG 2</button></td>
+    <td><button class="button-12" role="button" onclick="play_video('stimuli/gesture-only/ISG_2_C3_7_eval_0447.mp4', 'T2-ISG 2')" >T2-ISG 2</button></td>
+    <td><button class="button-12" role="button" onclick="play_video('stimuli/gesture-only/Grad_2_C3_7_eval_0447.mp4', 'Grad-TTS + M 2')" >Grad-TTS + M 2</button></td>
   </tr>
   <tr>
     <td>3</td>
-    <td><button class="button-12" role="button">NAT 3</button></td>
-    <td><button class="button-12" role="button">Diff-TTSG 3</button></td>
-    <td><button class="button-12" role="button">T2-ISG 3</button></td>
-    <td><button class="button-12" role="button">Grad-TTS + M 3</button></td>
+    <td><button class="button-12" role="button" onclick="play_video('stimuli/gesture-only/GT_3_C3_7_eval_0447.mp4', 'NAT 3')" >NAT 3</button></td>
+    <td><button class="button-12" role="button" onclick="play_video('stimuli/gesture-only/TTSG_3_C3_7_eval_0447.mp4', 'Diff-TTSG 3')" >Diff-TTSG 3</button></td>
+    <td><button class="button-12" role="button" onclick="play_video('stimuli/gesture-only/ISG_3_C3_7_eval_0447.mp4', 'T2-ISG 3')" >T2-ISG 3</button></td>
+    <td><button class="button-12" role="button" onclick="play_video('stimuli/gesture-only/Grad_3_C3_7_eval_0447.mp4', 'Grad-TTS + M 3')" >Grad-TTS + M 3</button></td>
   </tr>
   <tr>
     <td>4</td>
-    <td><button class="button-12" role="button">NAT 4</button></td>
-    <td><button class="button-12" role="button">Diff-TTSG 4</button></td>
-    <td><button class="button-12" role="button">T2-ISG 4</button></td>
-    <td><button class="button-12" role="button">Grad-TTS + M 4</button></td>
+    <td><button class="button-12" role="button" onclick="play_video('stimuli/gesture-only/GT_4_C3_7_eval_0447.mp4', 'NAT 4')" >NAT 4</button></td>
+    <td><button class="button-12" role="button" onclick="play_video('stimuli/gesture-only/TTSG_4_C3_7_eval_0447.mp4', 'Diff-TTSG 4')" >Diff-TTSG 4</button></td>
+    <td><button class="button-12" role="button" onclick="play_video('stimuli/gesture-only/ISG_4_C3_7_eval_0447.mp4', 'T2-ISG 4')" >T2-ISG 4</button></td>
+    <td><button class="button-12" role="button" onclick="play_video('stimuli/gesture-only/Grad_4_C3_7_eval_0447.mp4', 'Grad-TTS + M 4')" >Grad-TTS + M 4</button></td>
   </tr>
 </tbody>
 </table>
