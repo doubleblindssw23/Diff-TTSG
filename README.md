@@ -539,11 +539,12 @@ Currently loaded: <span id="beat-gesture-synthesis-video-span" style="font-weigh
   beat_gesture_transcript = document.getElementById('best-gesture-transcript')
 
   transcript_beat_videos = {
-  '1' : "And the train stopped, The door opened. I got out first, then Jack Kane got out, Ronan got out, Louise got out.",
-  '2' : "So I went to the other side and then suddenly I saw someone running towards me I didn't really understand who it was but then I heard the noise and I was like no screw this I just started running and I ran as fast as I possibly could.",
-  '3' : "It was so so good, absolutely fantastic. The other day we went to watch the movie I never thought I would like it this much but I was so wrong, it was amazing.",
-  '4' : "Jim asked if we should do a group hug, it was a strange request but then, he insisted again this time I had to shout no please not again, no, never, I dont want to hug. Please leave me alone and I went out.",
-  '5' : "I started counting one, two, three and then I turned back I see everyone ran and hid somewhere the game of hide and seek was so fun I am going to play it again later, with my niece and nephew."
+    '1' : "And the train stopped, The door opened. I got out first, then Jack Kane got out, Ronan got out, Louise got out.",
+    '2' : "Drop the car off in Miami , and that was fine So we had a big plan, and so literally one morning one by one we would literally run down the stairs with our bags and then just we just ran.",
+    '3' : "It was so so good, absolutely fantastic. The other day we went to watch the movie I never thought I would like it this much but I was so wrong, it was amazing.",
+    '4' : "Jim asked if we should do a group hug, it was a strange request but then, he insisted again this time I had to shout no please not again, no, never, I dont want to hug. Please leave me alone and I went out.",
+    '5' : "I started counting one, two, three and then I turned back I see everyone ran and hid somewhere the game of hide and seek was so fun I am going to play it again later, with my niece and nephew.",
+    '6' : "So I went to the other side and then suddenly I saw someone running towards me I didn't really understand who it was but then I heard the noise and I was like no screw this I just started running and I ran as fast as I possibly could."
   }
 
 
@@ -576,6 +577,103 @@ Currently loaded: <span id="beat-gesture-synthesis-video-span" style="font-weigh
     </td>
     <td>
       <button class="button-12" role="button" onclick="play_beat_video('./stimuli/synthesised_examples/beat_5.mp4', 'Example 5')">Example 5</button>
+    </td>
+    <td>
+      <button class="button-12" role="button" onclick="play_beat_video('./stimuli/synthesised_examples/beat_6.mp4', 'Example 6')">Example 6</button>
+    </td>
+  </tr>
+</tbody>
+</table>
+
+### Positive-negative emotional pairs
+
+
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky">Positive emotion</th>
+    <th class="tg-0pky">Negative emotion</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+      <td> 
+          <video id="positive-emotional-pair" class="video-js" controls width="500" height="282">
+              <source id="positive-emotional-pair-source" src="./stimuli/positive-negative/pos_1.mp4" type='video/mp4' />
+          </video>
+      </td>
+      <td>
+        <video id="negative-emotional-pair" class="video-js" controls width="500" height="282">
+              <source id="negative-emotional-pair-source" src="./stimuli/positive-negative/neg_1.mp4" type='video/mp4' />
+          </video>
+      </td>
+  </tr>
+</tbody>
+</table>
+Currently loaded: <span id="emotional-pair-text" style="font-weight: bold;" > Example 1</span>
+
+<blockquote>
+  <p id="emotional-pair-text-transcription">
+    <b> Positive: </b> I went to a comedy show last night, and it was absolutely hilarious. The jokes were fresh and clever, and I laughed so hard my sides hurt. <br><b>Negative: </b>I tried meditating to relieve stress, but it just made me feel more anxious. I couldn't stop thinking about all the things I needed to do, and it felt like a waste of time.
+  </p>
+</blockquote>
+
+
+<script>
+
+  positive_emotional_pair = document.getElementById('positive-emotional-pair')
+  positive_emotional_pair_source = document.getElementById('positive-emotional-pair-source')
+
+  negative_emotional_pair = document.getElementById('negative-emotional-pair')
+  negative_emotional_pair_source = document.getElementById('negative-emotional-pair-source')
+
+  emotional_pair_text =  document.getElementById('emotional-pair-text')
+  emotional_pair_text_transcription = document.getElementById('emotional-pair-text-transcription')
+
+
+
+  transcript_pos_negative = {
+    '1' : "<b> Positive: </b> I went to a comedy show last night, and it was absolutely hilarious. The jokes were fresh and clever, and I laughed so hard my sides hurt. <br><b>Negative: </b>I went to a comedy show last night, and it was painfully unfunny. The jokes were outdated and offensive, and I couldn't wait for it to be over.",
+    '2' : "<b> Positive: </b> I planned a surprise birthday party for my partner, and everything went perfectly. The cake was delicious, the guests arrived on time, and my partner was genuinely surprised. <br><b>Negative: </b>I tried to plan a surprise birthday party for my partner, but everything went wrong. The cake was ruined, the guests arrived late, and my partner figured it out beforehand.",
+    '3' : "<b> Positive: </b> I went shopping for a new outfit for an upcoming event, and I found the perfect ensemble. Everything was reasonably priced and fit like a dream, and I left feeling so satisfied. <br><b>Negative: </b>I went shopping for a new outfit for an upcoming event, but I couldn't find anything I liked. Everything was either too expensive or just didn't fit right, and I left feeling so frustrated.",
+  }
+
+  function play_positive_negative_pair(positive_filename, negative_filename, text){
+      id = text[text.length - 1];
+
+      positive_emotional_pair.pause();
+      negative_emotional_pair.pause();
+
+      positive_emotional_pair_source.src = positive_filename;
+      negative_emotional_pair_source.src = negative_filename;
+
+      emotional_pair_text.innerHTML = text;
+      emotional_pair_text_transcription.innerHTML = transcript_pos_negative[id];
+
+      positive_emotional_pair.load();
+      negative_emotional_pair.load();
+  }
+</script>
+
+
+<table class="tg">
+<tbody>
+  <tr>
+    <td>
+      <button class="button-12" role="button" onclick="play_positive_negative_pair('./stimuli/positive-negative/pos_1.mp4', './stimuli/positive-negative/neg_1.mp4' ,'Example 1')" >
+        Example 1
+      </button>
+    </td>
+    <td>
+      <button class="button-12" role="button" onclick="play_positive_negative_pair('./stimuli/positive-negative/pos_2.mp4', './stimuli/positive-negative/neg_2.mp4' ,'Example 2')" >
+        Example 2
+      </button>
+    </td>
+    <td>
+      <button class="button-12" role="button" onclick="play_positive_negative_pair('./stimuli/positive-negative/pos_3.mp4', './stimuli/positive-negative/neg_3.mp4' ,'Example 3')" >
+        Example 3
+      </button>
     </td>
   </tr>
 </tbody>
