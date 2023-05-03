@@ -682,7 +682,7 @@ Currently loaded: <span id="emotional-pair-text" style="font-weight: bold;" > Ex
 
 
 ## Importance of the diffusion model.
-To illustrate the importance of using diffusion in modelling both speech and motion, these stimuli compare synthesis from condition D-TTSG to synthesis from the &mu; values predicted by the D-TTSG decoder and Conformer.
+To illustrate the importance of using diffusion in modelling both speech and motion, these stimuli compare synthesis from condition D-TTSG to synthesis directly from the &mu; values predicted by the D-TTSG decoder and Conformer.
 
 
 
