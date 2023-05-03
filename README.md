@@ -335,7 +335,7 @@ function play_video(filename, text){
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-0pky">#</th>
+    <th class="tg-0pky">Text prompt #</th>
     <th class="tg-0pky">NAT</th>
     <th class="tg-0pky">Diff-TTSG</th>
     <th class="tg-0pky">T2-ISG</th>
