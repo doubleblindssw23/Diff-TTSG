@@ -389,12 +389,12 @@ function play_video(filename, text){
 <tbody>
   <tr>
       <td> 
-          <video id="speech-and-gesture-video-matched" class="video-js" controls width="640" height="360">
+          <video id="speech-and-gesture-video-matched" class="video-js" controls width="500" height="282">
               <source id="speech-and-gesture-video-matched-source" src="./stimuli/speech-and-gesture/TTSG_C4_3_eval_0150_matched.mp4" type='video/mp4' />
           </video>
       </td>
       <td>
-        <video id="speech-and-gesture-video-mismatched" class="video-js" controls width="640" height="360">
+        <video id="speech-and-gesture-video-mismatched" class="video-js" controls width="500" height="282">
               <source id="speech-and-gesture-video-mismatched-source" src="./stimuli/speech-and-gesture/TTSG_C4_3_eval_0150_mismatched.mp4" type='video/mp4' />
           </video>
       </td>
