@@ -1,7 +1,7 @@
 # Diff-TTSG : Denoising probabilistic integrated speech and gesture synthesis
 
 
-We present Diff-TTSG, the first diffusion-based probabilistic model that jointly learns to synthesise speech and gestures together. Our method is non-autoregressive in nature and can be trained on small datasets from scratch. In addition, to showcase the efficacy of these systems and pave the way for their evaluation, we describe an improved set of uni- and multi-modal subjective tests for evaluating integrated speech and gesture synthesis systems.
+We present Diff-TTSG, the first diffusion model that jointly learns to synthesise speech and gestures together. Our method is non-autoregressive in nature and can be trained on small datasets from scratch. In addition, to showcase the efficacy of these systems and pave the way for their evaluation, we describe an improved set of uni- and multi-modal subjective tests for evaluating integrated speech and gesture synthesis systems.
 
 
 <style type="text/css">
@@ -311,7 +311,7 @@ video {
 </table> -->
 
 
-### Gesture only evaluation
+### Gesture-only evaluation (no audio)
 
 <video id="gesture-only-video" class="video-js" controls width="640" height="360">
     <source id="gesture-only-video-source" src="./stimuli/gesture-only/TTSG_1_C3_7_eval_0447.mp4" type='video/mp4' />
@@ -335,7 +335,7 @@ function play_video(filename, text){
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-0pky">#</th>
+    <th class="tg-0pky">Text prompt #</th>
     <th class="tg-0pky">NAT</th>
     <th class="tg-0pky">Diff-TTSG</th>
     <th class="tg-0pky">T2-ISG</th>
