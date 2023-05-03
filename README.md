@@ -513,3 +513,70 @@ Currently loaded: <span id="playing-speech-and-gesture-span" style="font-weight:
 </table>
 
 
+
+## Synthesis from proposed system (Diff-TTSG)
+
+### Beat gestures 
+
+
+
+<video id="beat-gesture-synthesis-video" class="video-js" controls width="640" height="360">
+  <source id="beat-gesture-synthesis-video-source" src="./stimuli/synthesised_examples/beat_1.mp4" type='video/mp4' />
+</video>
+
+Currently loaded: <span id="beat-gesture-synthesis-video-span" style="font-weight: bold;" > Example 1</span>
+
+<blockquote>
+  <p id="best-gesture-transcript">
+    And the train stopped, The door opened. I got out first, then Jack Kane got out, Ronan got out, Louise got out.
+  </p>
+</blockquote>
+
+<script>
+  beat_gesture_synthesis_video = document.getElementById('beat-gesture-synthesis-video')
+  beat_gesture_synthesis_video_source = document.getElementById('beat-gesture-synthesis-video-source')
+  beat_gesture_synthesis_video_span =  document.getElementById('beat-gesture-synthesis-video-span')
+  beat_gesture_transcript = document.getElementById('best-gesture-transcript')
+
+  transcript_beat_videos = {
+  '1' : "And the train stopped, The door opened. I got out first, then Jack Kane got out, Ronan got out, Louise got out.",
+  '2' : "So I went to the other side and then suddenly I saw someone running towards me I didn't really understand who it was but then I heard the noise and I was like no screw this I just started running and I ran as fast as I possibly could.",
+  '3' : "It was so so good, absolutely fantastic. The other day we went to watch the movie I never thought I would like it this much but I was so wrong, it was amazing.",
+  '4' : "Jim asked if we should do a group hug, it was a strange request but then, he insisted again this time I had to shout no please not again, no, never, I dont want to hug. Please leave me alone and I went out.",
+  '5' : "I started counting one, two, three and then I turned back I see everyone ran and hid somewhere the game of hide and seek was so fun I am going to play it again later, with my niece and nephew."
+  }
+
+
+  function play_beat_video(filename, text){
+    id = text[text.length - 1];
+
+    beat_gesture_synthesis_video.pause();
+    beat_gesture_synthesis_video_source.src = filename;
+    beat_gesture_synthesis_video_span.innerHTML = text;
+    beat_gesture_transcript.innerHTML = transcript_beat_videos[id];
+    beat_gesture_synthesis_video.load();
+    beat_gesture_synthesis_video.play();
+  }
+</script>
+
+<table class="tg">
+<tbody>
+  <tr>
+    <td>
+      <button class="button-12" role="button" onclick="play_beat_video('./stimuli/synthesised_examples/beat_1.mp4', 'Example 1')">Example 1</button>
+    </td>
+    <td>
+      <button class="button-12" role="button" onclick="play_beat_video('./stimuli/synthesised_examples/beat_2.mp4', 'Example 2')">Example 2</button>
+    </td>
+    <td>
+      <button class="button-12" role="button" onclick="play_beat_video('./stimuli/synthesised_examples/beat_3.mp4', 'Example 3')">Example 3</button>
+    </td>
+    <td>
+      <button class="button-12" role="button" onclick="play_beat_video('./stimuli/synthesised_examples/beat_4.mp4', 'Example 4')">Example 4</button>
+    </td>
+    <td>
+      <button class="button-12" role="button" onclick="play_beat_video('./stimuli/synthesised_examples/beat_5.mp4', 'Example 5')">Example 5</button>
+    </td>
+  </tr>
+</tbody>
+</table>
