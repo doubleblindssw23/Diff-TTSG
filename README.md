@@ -333,7 +333,7 @@ gesture_only_span_text =  document.getElementById('playing-gesture-only')
 gesture_only_transcript = document.getElementById('gesture-only-transcription')
 
 
-transcript = {
+transcript_gesture_only = {
   '1' : "If you like touched it, it was excruciatingly sore. And I went up to the teachers I was like look I'm after like really damaging my finger I might have to go to the doctors.",
   '2' : "When I was in primary school I used to have this ruler and I used to put it between desks and I used to push the tables together so the ruler would be between the two tables.",
   '3' : "Because you can actually you actually do feel the kind of the mental strains of social media and you know people depicting these perfect lives online and you're like oho.",
@@ -347,7 +347,7 @@ function play_video(filename, text){
     gesture_only_video.pause();
     gesture_only_video_source.src = filename;
     gesture_only_span_text.innerHTML = text;
-    gesture_only_transcript.innerHTML = transcript[id];
+    gesture_only_transcript.innerHTML = transcript_gesture_only[id];
     gesture_only_video.load();
     gesture_only_video.play();
 
@@ -428,29 +428,48 @@ function play_video(filename, text){
 
 Currently loaded: <span id="playing-speech-and-gesture-span" style="font-weight: bold;" > Diff-TTSG 1</span>
 
-
+<blockquote>
+  <p id="speech-and-gesture-transcription">
+    Yeah and then obviously there, there's certain choirs that come down to the church. There's a woman called, I can't remember her name. But she has an incredible voice. Like an amazing voice.
+  </p>
+</blockquote>
 
 
 <script>
-speech_and_gesture_video_matched = document.getElementById('speech-and-gesture-video-matched')
-speech_and_gesture_video_matched_source = document.getElementById('speech-and-gesture-video-matched-source')
 
-speech_ang_gesture_video_mismatched = document.getElementById('speech-and-gesture-video-mismatched')
-speech_and_gesture_video_mismatched_source = document.getElementById('speech-and-gesture-video-mismatched-source')
+  speech_and_gesture_video_matched = document.getElementById('speech-and-gesture-video-matched')
+  speech_and_gesture_video_matched_source = document.getElementById('speech-and-gesture-video-matched-source')
 
-speech_and_gesture_span_text =  document.getElementById('playing-speech-and-gesture-span')
-function play_speech_and_gesture_eval(matched_filename, mismatched_filename, text){
-    speech_and_gesture_video_matched.pause();
-    speech_ang_gesture_video_mismatched.pause();
+  speech_ang_gesture_video_mismatched = document.getElementById('speech-and-gesture-video-mismatched')
+  speech_and_gesture_video_mismatched_source = document.getElementById('speech-and-gesture-video-mismatched-source')
 
-    speech_and_gesture_video_matched_source.src = matched_filename;
-    speech_and_gesture_video_mismatched_source.src = mismatched_filename;
+  speech_and_gesture_span_text =  document.getElementById('playing-speech-and-gesture-span')
+  speech_and_gesture_transcript = document.getElementById('speech-and-gesture-transcription')
 
-    speech_and_gesture_span_text.innerHTML = text;
 
-    speech_and_gesture_video_matched.load();
-    speech_ang_gesture_video_mismatched.load();
-}
+
+  transcript_speech_and_gesture = {
+    '1' : "Yeah and then obviously there, there's certain choirs that come down to the church. There's a woman called, I can't remember her name. But she has an incredible voice. Like an amazing voice.",
+    '2' : "When you think about it, that you do as a child, it's just absolutely ridiculous that makes no sense. But you can always justify it back then because it just seemed like the fun right thing to do.",
+    '3' : "You walk around Dublin city centre and even if you try and strike up a conversation with somebody it's impossible because everyone has their headphones in. And again, I would listen to podcasts sometimes with my headphones in walking around the streets.",
+    '4' : "Just so this whole social networking stuff just really really annoys me and cause it just warps people's minds and people are so Fixated on their phones and that sort of stuff that I just hate that so much."
+  }
+
+  function play_speech_and_gesture_eval(matched_filename, mismatched_filename, text){
+      id = text[text.length - 1];
+
+      speech_and_gesture_video_matched.pause();
+      speech_ang_gesture_video_mismatched.pause();
+
+      speech_and_gesture_video_matched_source.src = matched_filename;
+      speech_and_gesture_video_mismatched_source.src = mismatched_filename;
+
+      speech_and_gesture_span_text.innerHTML = text;
+      speech_and_gesture_transcript.innerHTML = transcript_speech_and_gesture[id];
+
+      speech_and_gesture_video_matched.load();
+      speech_ang_gesture_video_mismatched.load();
+  }
 </script>
 
 
@@ -481,7 +500,7 @@ function play_speech_and_gesture_eval(matched_filename, mismatched_filename, tex
   <tr>
     <td>3</td>
     <td><button class="button-12" role="button" onclick="play_speech_and_gesture_eval('./stimuli/speech-and-gesture/GT_C4_2_eval_0137_matched.mp4', './stimuli/speech-and-gesture/GT_C4_2_eval_0137_mismatched.mp4' ,'NAT 3')" >NAT 3</button></td>
-    <td><button class="button-12" role="button" onclick="play_speech_and_gesture_eval('./stimuli/speech-and-gesture/TTSG_C4_2_eval_0137_matched.mp4.mp4', './stimuli/speech-and-gesture/TTSG_C4_2_eval_0137_mismatched.mp4' ,'Diff-TTSG 3')" >Diff-TTSG 3</button></td>
+    <td><button class="button-12" role="button" onclick="play_speech_and_gesture_eval('./stimuli/speech-and-gesture/TTSG_C4_2_eval_0137_matched.mp4', './stimuli/speech-and-gesture/TTSG_C4_2_eval_0137_mismatched.mp4' ,'Diff-TTSG 3')" >Diff-TTSG 3</button></td>
     <td><button class="button-12" role="button" onclick="play_speech_and_gesture_eval('./stimuli/speech-and-gesture/ISG_C4_2_eval_0137_matched.mp4', './stimuli/speech-and-gesture/ISG_C4_2_eval_0137_mismatched.mp4' ,'T2-ISG 3')" >T2-ISG 3</button></td>
   </tr>
   <tr>
