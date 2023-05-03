@@ -128,7 +128,7 @@ video {
 
 ## Stimuli from the evaluation test
 
-### Speech only evaluation
+### Speech-only evaluation
 
 
 > "You walk around Dublin city centre and even if you try and strike up a conversation with somebody it's impossible because everyone has their headphones in. And again, I would listen to podcasts sometimes with my headphones in walking around the streets."
@@ -514,7 +514,7 @@ Currently loaded: <span id="playing-speech-and-gesture-span" style="font-weight:
 
 
 
-## Synthesis from proposed system (Diff-TTSG)
+## Additional examples from proposed system (Diff-TTSG)
 
 ### Beat gestures 
 
@@ -586,7 +586,6 @@ Currently loaded: <span id="beat-gesture-synthesis-video-span" style="font-weigh
 </table>
 
 ### Positive-negative emotional pairs
-
 
 
 <table class="tg">
@@ -672,6 +671,104 @@ Currently loaded: <span id="emotional-pair-text" style="font-weight: bold;" > Ex
     </td>
     <td>
       <button class="button-12" role="button" onclick="play_positive_negative_pair('./stimuli/positive-negative/pos_3.mp4', './stimuli/positive-negative/neg_3.mp4' ,'Example 3')" >
+        Example 3
+      </button>
+    </td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+## Importance of the diffusion model.
+To illustrate the importance of using diffusion in modelling both speech and motion, these stimuli compare synthesis from condition D-TTSG to synthesis from the $\mu$ values predicted by the D-TTSG decoder and Conformer.
+
+
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky"> &mu; (before diffusion)</th>
+    <th class="tg-0pky">Final output (after diffusion)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+      <td> 
+          <video id="before-diffusion-mu" class="video-js" controls width="500" height="282">
+              <source id="before-diffusion-mu-source" src="./stimuli/mu-synthesis/1_mu.mp4" type='video/mp4' />
+          </video>
+      </td>
+      <td>
+        <video id="after-diffusion" class="video-js" controls width="500" height="282">
+              <source id="after-diffusion-source" src="./stimuli/mu-synthesis/1.mp4" type='video/mp4' />
+          </video>
+      </td>
+  </tr>
+</tbody>
+</table>
+Currently loaded: <span id="mu-diffusion-text" style="font-weight: bold;" > Example 1</span>
+
+<blockquote>
+  <p id="mu-diffusion-transcription">
+    <b> Positive: </b> I went to a comedy show last night, and it was absolutely hilarious. The jokes were fresh and clever, and I laughed so hard my sides hurt. <br><b>Negative: </b>I tried meditating to relieve stress, but it just made me feel more anxious. I couldn't stop thinking about all the things I needed to do, and it felt like a waste of time.
+  </p>
+</blockquote>
+
+
+<script>
+
+  before_diffusion_mu = document.getElementById('before-diffusion-mu')
+  before_diffusion_mu_source = document.getElementById('before-diffusion-mu-source')
+
+  after_diffusion = document.getElementById('after-diffusion')
+  after_diffusion_source = document.getElementById('after-diffusion-source')
+
+  mu_diffusion_text =  document.getElementById('mu-diffusion-text')
+  mu_diffusion_transcription = document.getElementById('mu-diffusion-transcription')
+
+
+
+  transcript_mu_diffusion = {
+    '1' : "But and again so that doesn't help people like myself and my friend who actually want to strike up a conversation with a genuine person out in the open because we don't want to go online we don't feel like we have to do that.",
+    '2' : "You walk around Dublin city centre and even if you try and strike up a conversation with somebody it's impossible because everyone has their headphones in. And again, I would listen to podcasts sometimes with my headphones in walking around the streets.",
+    '3' : "I mean it it's not that I'm against it it's just that I just don't have the time and I just sometimes I'm not bothered and that sort of stuff."
+  }
+
+  function play_mu_diffusion(mu_filename, final_filename, text){
+      id = text[text.length - 1];
+
+      before_diffusion_mu.pause();
+      after_diffusion.pause();
+
+      before_diffusion_mu_source.src = mu_filename;
+      after_diffusion_source.src = final_filename;
+
+      mu_diffusion_text.innerHTML = text;
+      mu_diffusion_transcription.innerHTML = transcript_mu_diffusion[id];
+
+      before_diffusion_mu.load();
+      after_diffusion.load();
+  }
+</script>
+
+
+<table class="tg">
+<tbody>
+  <tr>
+    <td>
+      <button class="button-12" role="button" onclick="play_mu_diffusion('./stimuli/mu-synthesis/1_mu.mp4', './stimuli/mu-synthesis/1.mp4' ,'Example 1')" >
+        Example 1
+      </button>
+    </td>
+    <td>
+      <button class="button-12" role="button" onclick="play_mu_diffusion('./stimuli/mu-synthesis/2_mu.mp4', './stimuli/mu-synthesis/2.mp4' ,'Example 2')" >
+        Example 2
+      </button>
+    </td>
+    <td>
+      <button class="button-12" role="button" onclick="play_mu_diffusion('./stimuli/mu-synthesis/3_mu.mp4', './stimuli/mu-synthesis/3.mp4' ,'Example 3')" >
         Example 3
       </button>
     </td>
