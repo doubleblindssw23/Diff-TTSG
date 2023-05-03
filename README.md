@@ -1,13 +1,7 @@
 # Diff-TTSG : Denoising probabilistic integrated speech and gesture synthesis
 
 
-We present Diff-TTSG, the first diffusion-based probabilistic model that jointly learns to synthesise speech and gestures together. Our method:
-
-* Is fully probabilistic in nature
-* Is non autoregressive and parallel
-* Can be trained on small datasets from scratch
-
-In addition, to showcase the efficacy of these systems and pave the way for their evaluation, we describe an improved set of uni- and multi-modal subjective tests for evaluating integrated speech and gesture synthesis systems.
+We present Diff-TTSG, the first diffusion-based probabilistic model that jointly learns to synthesise speech and gestures together. Our method is non-autoregressive in nature and can be trained on small datasets from scratch. In addition, to showcase the efficacy of these systems and pave the way for their evaluation, we describe an improved set of uni- and multi-modal subjective tests for evaluating integrated speech and gesture synthesis systems.
 
 
 <style type="text/css">
