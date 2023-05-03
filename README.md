@@ -311,7 +311,7 @@ video {
 </table> -->
 
 
-### Gesture only evaluation
+### Gesture-only evaluation (no audio)
 
 <video id="gesture-only-video" class="video-js" controls width="640" height="360">
     <source id="gesture-only-video-source" src="./stimuli/gesture-only/TTSG_1_C3_7_eval_0447.mp4" type='video/mp4' />
