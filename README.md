@@ -401,6 +401,7 @@ function play_video(filename, text){
   </tr>
 </tbody>
 </table>
+<h6> *Note: Matched versus mismatched stimuli were not labelled in the study and presented in random order. </h6>
 
 
 Currently loaded: <span id="playing-speech-and-gesture-span" style="font-weight: bold;" > Diff-TTSG 1</span>
