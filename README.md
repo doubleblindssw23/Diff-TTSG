@@ -124,6 +124,7 @@ video {
 
 </style>
 
+<script src="transcripts.js"></script>
 
 ## Stimuli from the evaluation test
 
@@ -319,16 +320,37 @@ video {
 
 Currently loaded: <span id="playing-gesture-only" style="font-weight: bold;" > Diff-TTSG 1</span>
 
+<blockquote>
+  <p id="gesture-only-transcription">
+    If you like touched it, it was excruciatingly sore. And I went up to the teachers I was like look I'm after like really damaging my finger I might have to go to the doctors.
+  </p>
+</blockquote>
+
 <script>
 gesture_only_video = document.getElementById('gesture-only-video')
 gesture_only_video_source = document.getElementById('gesture-only-video-source')
 gesture_only_span_text =  document.getElementById('playing-gesture-only')
+gesture_only_transcript = document.getElementById('gesture-only-transcription')
+
+
+transcript = {
+  '1' : "If you like touched it, it was excruciatingly sore. And I went up to the teachers I was like look I'm after like really damaging my finger I might have to go to the doctors.",
+  '2' : "When I was in primary school I used to have this ruler and I used to put it between desks and I used to push the tables together so the ruler would be between the two tables.",
+  '3' : "Because you can actually you actually do feel the kind of the mental strains of social media and you know people depicting these perfect lives online and you're like oho.",
+  '4' : "I mean it it's not that I'm against it it's just that I just don't have the time and I just sometimes I'm not bothered and that sort of stuff."
+}
+
+
 function play_video(filename, text){
+    id = text[text.length - 1];
+
     gesture_only_video.pause();
     gesture_only_video_source.src = filename;
     gesture_only_span_text.innerHTML = text;
+    gesture_only_transcript.innerHTML = transcript[id];
     gesture_only_video.load();
     gesture_only_video.play();
+
 }
 </script>
 
@@ -437,7 +459,7 @@ function play_speech_and_gesture_eval(matched_filename, mismatched_filename, tex
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-0pky">#</th>
+    <th class="tg-0pky">Text prompt #</th>
     <th class="tg-0pky">NAT</th>
     <th class="tg-0pky">Diff-TTSG</th>
     <th class="tg-0pky">T2-ISG</th>
