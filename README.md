@@ -116,6 +116,12 @@ audio {
   box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
   outline: 0;
 }
+
+video {
+  margin: 1em;
+}
+
+
 </style>
 
 
@@ -311,7 +317,7 @@ audio {
     <source id="gesture-only-video-source" src="./stimuli/gesture-only/TTSG_1_C3_7_eval_0447.mp4" type='video/mp4' />
 </video>
 
-Currently playing: <span id="playing-gesture-only" style="font-weight: bold;" > Diff-TTSG 1</span>
+Currently loaded: <span id="playing-gesture-only" style="font-weight: bold;" > Diff-TTSG 1</span>
 
 <script>
 gesture_only_video = document.getElementById('gesture-only-video')
@@ -369,4 +375,99 @@ function play_video(filename, text){
 </table>
 
 
-<!-- HTML !-->
+### Speech-and-gesture evaluation
+
+
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky">Matched</th>
+    <th class="tg-0pky">Mismatched</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+      <td> 
+          <video id="speech-and-gesture-video-matched" class="video-js" controls width="640" height="360">
+              <source id="speech-and-gesture-video-matched-source" src="./stimuli/speech-and-gesture/TTSG_C4_3_eval_0150_matched.mp4" type='video/mp4' />
+          </video>
+      </td>
+      <td>
+        <video id="speech-and-gesture-video-mismatched" class="video-js" controls width="640" height="360">
+              <source id="speech-and-gesture-video-mismatched-source" src="./stimuli/speech-and-gesture/TTSG_C4_3_eval_0150_mismatched.mp4" type='video/mp4' />
+          </video>
+      </td>
+  </tr>
+</tbody>
+</table>
+
+
+Currently loaded: <span id="playing-speech-and-gesture-span" style="font-weight: bold;" > Diff-TTSG 1</span>
+
+
+
+
+<script>
+speech_and_gesture_video_matched = document.getElementById('speech-and-gesture-video-matched')
+speech_and_gesture_video_matched_source = document.getElementById('speech-and-gesture-video-matched-source')
+
+speech_ang_gesture_video_mismatched = document.getElementById('speech-and-gesture-video-mismatched')
+speech_and_gesture_video_mismatched_source = document.getElementById('speech-and-gesture-video-mismatched-source')
+
+speech_and_gesture_span_text =  document.getElementById('playing-speech-and-gesture-span')
+function play_speech_and_gesture_eval(matched_filename, mismatched_filename, text){
+    speech_and_gesture_video_matched.pause();
+    speech_ang_gesture_video_mismatched.pause();
+
+    speech_and_gesture_video_matched_source.src = matched_filename;
+    speech_and_gesture_video_mismatched_source.src = mismatched_filename;
+
+    speech_and_gesture_span_text.innerHTML = text;
+
+    speech_and_gesture_video_matched.load();
+    speech_ang_gesture_video_mismatched.load();
+}
+</script>
+
+
+
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky">#</th>
+    <th class="tg-0pky">NAT</th>
+    <th class="tg-0pky">Diff-TTSG</th>
+    <th class="tg-0pky">T2-ISG</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>1</td>
+    <td><button class="button-12" role="button" onclick="play_speech_and_gesture_eval('./stimuli/speech-and-gesture/GT_C4_3_eval_0150_matched.mp4', './stimuli/speech-and-gesture/GT_C4_3_eval_0150_mismatched.mp4' ,'NAT 1')" >NAT 1</button></td>
+    <td><button class="button-12" role="button" onclick="play_speech_and_gesture_eval('./stimuli/speech-and-gesture/TTSG_C4_3_eval_0150_matched.mp4', './stimuli/speech-and-gesture/TTSG_C4_3_eval_0150_mismatched.mp4' ,'Diff-TTSG 1')" >Diff-TTSG 1</button></td>
+    <td><button class="button-12" role="button" onclick="play_speech_and_gesture_eval('./stimuli/speech-and-gesture/ISG_C4_3_eval_0150_matched.mp4', './stimuli/speech-and-gesture/ISG_C4_3_eval_0150_mismatched.mp4' ,'T2-ISG 1')" >T2-ISG 1</button></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td><button class="button-12" role="button" onclick="play_speech_and_gesture_eval('./stimuli/speech-and-gesture/GT_C3_7_eval_1074_matched.mp4', './stimuli/speech-and-gesture/GT_C3_7_eval_1074_mismatched.mp4' ,'NAT 2')" >NAT 2</button></td>
+    <td><button class="button-12" role="button" onclick="play_speech_and_gesture_eval('./stimuli/speech-and-gesture/TTSG_C3_7_eval_1074_matched.mp4', './stimuli/speech-and-gesture/TTSG_C3_7_eval_1074_mismatched.mp4' ,'Diff-TTSG 2')" >Diff-TTSG 2</button></td>
+    <td><button class="button-12" role="button" onclick="play_speech_and_gesture_eval('./stimuli/speech-and-gesture/ISG_C3_7_eval_1074_matched.mp4', './stimuli/speech-and-gesture/ISG_C3_7_eval_1074_mismatched.mp4' ,'T2-ISG 2')" >T2-ISG 2</button></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td><button class="button-12" role="button" onclick="play_speech_and_gesture_eval('./stimuli/speech-and-gesture/GT_C4_2_eval_0137_matched.mp4', './stimuli/speech-and-gesture/GT_C4_2_eval_0137_mismatched.mp4' ,'NAT 3')" >NAT 3</button></td>
+    <td><button class="button-12" role="button" onclick="play_speech_and_gesture_eval('./stimuli/speech-and-gesture/TTSG_C4_2_eval_0137_matched.mp4.mp4', './stimuli/speech-and-gesture/TTSG_C4_2_eval_0137_mismatched.mp4' ,'Diff-TTSG 3')" >Diff-TTSG 3</button></td>
+    <td><button class="button-12" role="button" onclick="play_speech_and_gesture_eval('./stimuli/speech-and-gesture/ISG_C4_2_eval_0137_matched.mp4', './stimuli/speech-and-gesture/ISG_C4_2_eval_0137_mismatched.mp4' ,'T2-ISG 3')" >T2-ISG 3</button></td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td><button class="button-12" role="button" onclick="play_speech_and_gesture_eval('./stimuli/speech-and-gesture/GT_C4_2_eval_0011_matched.mp4', './stimuli/speech-and-gesture/GT_C4_2_eval_0011_mismatched.mp4' ,'NAT 4')" >NAT 4</button></td>
+    <td><button class="button-12" role="button" onclick="play_speech_and_gesture_eval('./stimuli/speech-and-gesture/TTSG_C4_2_eval_0011_matched.mp4', './stimuli/speech-and-gesture/TTSG_C4_2_eval_0011_mismatched.mp4' ,'Diff-TTSG 4')" >Diff-TTSG 4</button></td>
+    <td><button class="button-12" role="button" onclick="play_speech_and_gesture_eval('./stimuli/speech-and-gesture/ISG_C4_2_eval_0011_matched.mp4', './stimuli/speech-and-gesture/ISG_C4_2_eval_0011_mismatched.mp4' ,'T2-ISG 4')" >T2-ISG 4</button></td>
+  </tr>
+</tbody>
+</table>
+
+
