@@ -1,7 +1,7 @@
-# Diff-TTSG : Denoising probabilistic integrated speech and gesture synthesis
+# Diff-TTSG: Denoising probabilistic integrated speech and gesture synthesis
 
 
-We present Diff-TTSG, the first diffusion model that jointly learns to synthesise speech and gestures together. Our method is non-autoregressive in nature and can be trained on small datasets from scratch. In addition, to showcase the efficacy of these systems and pave the way for their evaluation, we describe an improved set of uni- and multi-modal subjective tests for evaluating integrated speech and gesture synthesis systems.
+We present Diff-TTSG, the first diffusion model that jointly learns to synthesise speech and gestures together. Our method is non-autoregressive in nature and can be trained on small datasets from scratch. In addition, to showcase the efficacy of these systems and pave the way for their evaluation, we describe an set of careful uni- and multi-modal subjective tests for evaluating integrated speech and gesture synthesis systems.
 
 
 <style type="text/css">
@@ -131,7 +131,7 @@ video {
 ### Speech-only evaluation
 
 
-> "You walk around Dublin city centre and even if you try and strike up a conversation with somebody it's impossible because everyone has their headphones in. And again, I would listen to podcasts sometimes with my headphones in walking around the streets."
+> You walk around Dublin city centre and even if you try and strike up a conversation with somebody it's impossible because everyone has their headphones in. And again, I would listen to podcasts sometimes with my headphones in walking around the streets.
 <table class="tg">
   <thead>
     <tr>
@@ -167,7 +167,7 @@ video {
   </tbody>
 </table>
 
-> "And then a few weeks later after that my parents were away my granny was minding us and again I don't know why I told my brother to do this but I was like here."
+> And then a few weeks later after that my parents were away my granny was minding us and again I don't know why I told my brother to do this but I was like here.
 <table class="tg">
   <thead>
     <tr>
@@ -203,7 +203,7 @@ video {
   </tbody>
 </table>
 
-> "But I remember once my parents were just downstairs in the kitchen and this is when mobile phones just began coming out. So, like my oldest brother and my oldest sister had a mobile phone each I'm pretty sure."
+> But I remember once my parents were just downstairs in the kitchen and this is when mobile phones just began coming out. So, like my oldest brother and my oldest sister had a mobile phone each I'm pretty sure.
 <table class="tg">
   <thead>
     <tr>
@@ -239,7 +239,7 @@ video {
   </tbody>
 </table>
 
-> "Eventually got to a point where I was like okay I need to stop doing this sort of stuff Like it just doesn't make any sense as to why because I was getting hurt like there was times where like, I was like tearing muscles and I never broke a bone which I'm pretty proud of."
+> Eventually got to a point where I was like okay I need to stop doing this sort of stuff Like it just doesn't make any sense as to why because I was getting hurt like there was times where like, I was like tearing muscles and I never broke a bone which I'm pretty proud of.
 <table class="tg">
   <thead>
     <tr>
@@ -275,7 +275,7 @@ video {
   </tbody>
 </table>
 <!-- 
-> "I would like replenish stock I would bring up stock for the off-license that sort of stuff So I was doing all the kind of the menial kind of jobs like the kind of boring tedious work that someone had to do."
+> I would like replenish stock I would bring up stock for the off-license that sort of stuff So I was doing all the kind of the menial kind of jobs like the kind of boring tedious work that someone had to do.
 <table class="tg">
   <thead>
     <tr>
@@ -681,7 +681,7 @@ Currently loaded: <span id="emotional-pair-text" style="font-weight: bold;" > Ex
 
 
 
-## Importance of the diffusion model.
+## Importance of the diffusion model
 To illustrate the importance of using diffusion in modelling both speech and motion, these stimuli compare synthesis from condition D-TTSG to synthesis directly from the &mu; values predicted by the D-TTSG decoder and Conformer.
 
 
