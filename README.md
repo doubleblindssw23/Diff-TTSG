@@ -311,10 +311,9 @@ audio {
     <source id="gesture-only-video-source" src="./stimuli/gesture-only/TTSG_1_C3_7_eval_0447.mp4" type='video/mp4' />
 </video>
 
-Currently playing: <span id="playing-gesture-only"> Diff-TTSG 1</span>
+Currently playing: <span id="playing-gesture-only" style="font-weight: bold;" > Diff-TTSG 1</span>
 
 <script>
-
 gesture_only_video = document.getElementById('gesture-only-video')
 gesture_only_video_source = document.getElementById('gesture-only-video-source')
 gesture_only_span_text =  document.getElementById('playing-gesture-only')
@@ -325,7 +324,6 @@ function play_video(filename, text){
     gesture_only_video.load();
     gesture_only_video.play();
 }
-
 </script>
 
 <table class="tg">
